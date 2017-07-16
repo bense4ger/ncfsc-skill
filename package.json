@@ -2,7 +2,7 @@
   "name": "ncfsc-skill",
   "version": "1.0.0",
   "description": "The official NCFSC Alexa Skill",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage"
@@ -12,6 +12,7 @@
   "dependencies": {
     "alexa-sdk": "^1.0.11",
     "aws-sdk": "^2.81.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1"
   }
 }
