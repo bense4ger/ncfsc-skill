@@ -7,14 +7,14 @@ describe('factory', () => {
 
     });
     test('should throw an error if no key is passed', () => {
-        expect(() => factory.create()).toThrow('No key passed to factory');
+        expect(() => factory.instance()).toThrow('No key passed to factory');
     });
     test('should throw an error if an incorrect key is passed', () => {
         const failKey = 'fail';
-        expect(() => factory.create(failKey)).toThrow(`Factory cannot create ${failKey}`);
+        expect(() => factory.instance(failKey)).toThrow(`Factory cannot create ${failKey}`);
     });
-    test('should return an object if the correct key is passed', () => {
-        const obj = factory.create('s3');
+    test('should return a S3 if the correct key is passed', () => {
+        const obj = factory.instance('s3');
         expect(obj).toBeDefined();
         expect(obj).toBeInstanceOf(AWS.S3);
     });
