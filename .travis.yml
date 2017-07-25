@@ -2,7 +2,7 @@ language: node_js
 node_js: '6.10'
 deploy:
   provider: lambda
-  runtime: nodejs6.1
+  runtime: nodejs6.10
   function_name: NcfscSkill
   role: arn:aws:iam::503962799038:role/service-role/lambda_basic_execution
   handler_name: handler
