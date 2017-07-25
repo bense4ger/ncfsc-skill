@@ -1,0 +1,9 @@
+GetEventIntent when is the next event
+GetEventIntent what is the next event
+GetEventIntent when are the social club having their next event
+GetEventIntent when are they having their next event
+GetEventIntent do they have an event coming up
+GetEventIntent what are the details of the upcoming event
+GetEventIntent are there any details of the upcoming event
+GetEventIntent do they have an upcoming event
+GetEventIntent does the social club have an upcoming event
