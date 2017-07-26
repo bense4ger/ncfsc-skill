@@ -26,7 +26,7 @@ const handlers = {
         logger.log(logger.logType.ERR, 'Unhandled');
         logger.log(logger.logType.ERR, this.args);
 
-        this.emit(':tell', this.t('ERR_MESSAGE'));
+        this.emit(':tell', this.t('ERROR_MESSAGE'));
     },
     GetEventIntent: function () {
         logger.log(logger.logType.INFO, 'Entered GetEventIntent');
@@ -43,14 +43,14 @@ const handlers = {
                     logger.log(logger.logType.ERR, 'Error in GetEventIntent');
                     logger.log(logger.logType.ERR, err);
 
-                    this.emit(':tell', this.t('ERR_MESSAGE'));
+                    this.emit(':tell', this.t('ERROR_MESSAGE'));
                 });
         }
         catch (err) {
             logger.log(logger.logType.ERR, 'Error in GetEventIntent');
             logger.log(logger.logType.ERR, err);
 
-            this.emit(':tell', this.t('ERR_MESSAGE'));
+            this.emit(':tell', this.t('ERROR_MESSAGE'));
         }
     }
 };
