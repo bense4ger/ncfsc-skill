@@ -23,6 +23,11 @@ describe('responder', () => {
         expect(result).toEqual(`Our next event is foo which is on ${moment().add(7, 'days').format('Do MMMM YY')} at 7pm.  It is being held at location.`);
     });
 
+    test('should return a simple message if there are no events', () => {
+        const result = responder.success({});
+        expect(result).toEqual('There are no upcoming events.  Check back later, and keep an eye on the social club website');
+    });
+
     test('should return an error message if there is a failure', () => {
         const result = responder.failure();
         expect(result).toEqual('I\'m sorry, something has gone wrong. Please try again');
