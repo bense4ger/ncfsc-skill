@@ -1,8 +1,8 @@
 "use strict";
 const Alexa = require('alexa-sdk');
 const service = require('./lib/service');
-const responder = require('./lib/responder');
 const logger = require('./lib/logger');
+const { responseType, createResponse } = require('./lib/response-factory');
 
 const handlers = {
     LaunchRequest: function () {
@@ -35,7 +35,7 @@ const handlers = {
             service.getNextEvent()
                 .then(evt => {
                     logger.log(logger.logType.INFO, 'Returned event from service');
-                    const response = responder.success(evt);
+                    const response = createResponse(responseType.event, evt);
 
                     this.emit(':tell', response);
                 })
