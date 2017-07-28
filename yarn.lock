@@ -1814,6 +1814,10 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
+ssml-builder@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/ssml-builder/-/ssml-builder-0.2.4.tgz#74dfbd38f9af53ed2ad2694a5836f4f66637f163"
+
 string-length@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/string-length/-/string-length-1.0.1.tgz#56970fb1c38558e9e70b728bf3de269ac45adfac"
