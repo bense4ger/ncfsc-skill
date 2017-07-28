@@ -53,6 +53,11 @@ const handlers = {
 
             this.emit(':tell', responder.respond(responseType.error));
         }
+    },
+    GetInfoIntent: function () {
+        logger.log(logger.logType.INFO, 'Entered GetInfoIntent');
+
+        this.emit(':tell', responder.respond(responseType.info));
     }
 };
 

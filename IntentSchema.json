@@ -4,6 +4,12 @@
       "intent": "GetEventIntent"
     },
     {
+      "intent": "GetInfoIntent"
+    },
+    {
+      "intent": "MembershipIntent"
+    },
+    {
       "intent": "AMAZON.HelpIntent"
     },
     {
