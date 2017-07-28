@@ -1,7 +1,23 @@
-[{
+[
+  {
   "id": 1,
-  "name": "Player's forum",
+  "name": "a Player's forum",
   "date": "20170831",
   "vagueDate": "the end of August, or beginning of September",
   "isConfirmed": false
-}]
+  },
+  {
+    "id": 2,
+    "name": "a mental health awareness evening",
+    "date": "20170930",
+    "vagueDate": "the end of September",
+    "isConfirmed": false
+  },
+  {
+    "id": 3,
+    "name": "a treasure hunt",
+    "date": "20171001",
+    "vagueDate": "the beginning of October",
+    "isConfirmed": false
+  }
+]
