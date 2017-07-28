@@ -1,8 +1,9 @@
 "use strict";
 const Alexa = require('alexa-sdk');
 const service = require('./lib/service');
-const responder = require('./lib/responder');
 const logger = require('./lib/logger');
+const responseType = require('./lib/response-factory').responseType;
+const responder = require('./lib/responder');
 
 const handlers = {
     LaunchRequest: function () {
@@ -26,31 +27,30 @@ const handlers = {
         logger.log(logger.logType.ERR, 'Unhandled');
         logger.log(logger.logType.ERR, this.args);
 
-        this.emit(':tell', this.t('ERROR_MESSAGE'));
+        this.emit(':tell', responder(responseType.error));
     },
     GetEventIntent: function () {
         logger.log(logger.logType.INFO, 'Entered GetEventIntent');
 
         try{
             service.getNextEvent()
-                .then(evt => {
+                .then(eventModel => {
                     logger.log(logger.logType.INFO, 'Returned event from service');
-                    const response = responder.success(evt);
 
-                    this.emit(':tell', response);
+                    this.emit(':tell', responder.respond(responseType.event, eventModel));
                 })
                 .catch((err) => {
                     logger.log(logger.logType.ERR, 'Error in GetEventIntent');
                     logger.log(logger.logType.ERR, err);
 
-                    this.emit(':tell', this.t('ERROR_MESSAGE'));
+                    this.emit(':tell', responder.respond(responseType.error));
                 });
         }
         catch (err) {
             logger.log(logger.logType.ERR, 'Error in GetEventIntent');
             logger.log(logger.logType.ERR, err);
 
-            this.emit(':tell', this.t('ERROR_MESSAGE'));
+            this.emit(':tell', responder.respond(responseType.error));
         }
     }
 };
