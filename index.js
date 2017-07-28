@@ -36,6 +36,7 @@ const handlers = {
             service.getNextEvent()
                 .then(eventModel => {
                     logger.log(logger.logType.INFO, 'Returned event from service');
+                    logger.log(logger.logType.INFO, eventModel);
 
                     this.emit(':tell', responder.respond(responseType.event, eventModel));
                 })
