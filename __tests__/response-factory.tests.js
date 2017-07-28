@@ -34,7 +34,8 @@ describe('response-factory', () => {
         const model = {
             id: 1,
             name: 'foo',
-            date: 'sometime',
+            date: '20170101',
+            vagueDate: 'sometime',
             isConfirmed: false
         };
 
@@ -43,7 +44,7 @@ describe('response-factory', () => {
         expect(result).toBeInstanceOf(Speech);
         expect(result._elements).toHaveLength(5);
         expect(result._elements[1]).toBe(model.name);
-        expect(result._elements[3]).toContain(model.date);
+        expect(result._elements[3]).toContain(model.vagueDate);
     });
 
     test('when passed an empty event model it should create the correct empty response', () => {
