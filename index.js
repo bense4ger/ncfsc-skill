@@ -62,7 +62,7 @@ const handlers = {
     MembershipIntent: function () {
         logger.log(logger.logType.INFO, 'Entered MembershipIntent');
 
-        this.emit(':tell', response.respond(responseType.membership));
+        this.emit(':tell', responder.respond(responseType.membership));
     }
 };
 
