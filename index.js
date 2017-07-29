@@ -58,6 +58,11 @@ const handlers = {
         logger.log(logger.logType.INFO, 'Entered GetInfoIntent');
 
         this.emit(':tell', responder.respond(responseType.info));
+    },
+    MembershipIntent: function () {
+        logger.log(logger.logType.INFO, 'Entered MembershipIntent');
+
+        this.emit(':tell', response.respond(responseType.membership));
     }
 };
 
