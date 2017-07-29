@@ -60,6 +60,13 @@ describe('response-factory', () => {
 
     });
 
+    test('when passed a membership type it should create the correct membership response', () => {
+        const result = createResponse(responseType.membership);
+
+        expect(result).toBeInstanceOf(Speech);
+        expect(result._elements).toHaveLength(3);
+    });
+
     test('when passed an error type it should create an error response correctly', () => {
         const result = createResponse(responseType.error);
 

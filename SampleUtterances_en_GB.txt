@@ -9,3 +9,19 @@ GetEventIntent for any details of the upcoming event
 GetEventIntent do they have an upcoming event
 GetEventIntent if they have an upcoming event
 GetEventIntent does the social club have an upcoming event
+
+GetInfoIntent what it is
+GetInfoIntent what is it
+GetInfoIntent what does it do
+GetInfoIntent what it does
+GetInfoIntent what is the social club
+GetInfoIntent what the social club is
+
+MembershipIntent what is the membership fee
+MembershipIntent how do I join
+MembershipIntent how to join
+MembershipIntent how to pay
+MembershipIntent how much is membership
+MembershipIntent how does membership work
+MembershipIntent how do I become a member
+MembershipIntent if I can join
