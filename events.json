@@ -2,9 +2,10 @@
   {
   "id": 1,
   "name": "a Player's forum",
-  "date": "20170831",
-  "vagueDate": "the end of August, or beginning of September",
-  "isConfirmed": false
+  "date": "20170905",
+  "time": "7:30pm",
+  "location": "the Top of the Terrace at Carrow Road",
+  "isConfirmed": true
   },
   {
     "id": 2,
